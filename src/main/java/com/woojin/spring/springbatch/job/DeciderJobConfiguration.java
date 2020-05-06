@@ -28,7 +28,7 @@ public class DeciderJobConfiguration {
     public Job deciderJob(){
         return jobBuilderFactory.get("deciderJob")
                 .start(startStep())
-                .next(decider())
+                .next(decider())    // 홀, 짝 구분
                 .from(decider())
                     .on("ODD")
                     .to(oddStep())
